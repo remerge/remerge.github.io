@@ -36,10 +36,11 @@ network | if the event is attributes to a partner, the networks name or id | Fac
 campaign | if the event is attributes to a partner, the campaign name or id | us_retarget_lappsed
 ad | if the event is attributes to a partner , the ad name or id | 1231
 creative | if the event is attributes to a partner, the creative name or id | super_banner.png
+click_id | pass through parameter for the unique ad click id (usually appended to a click tracking url by remerge) | iwShT9ec49
 
 
 
 ## Example
 Example with placeholders (whereas {PLACEHOLDER} should be the name of your internal placeholder)
 
-    http://track.eu1.remerge.io/event?app_id={PLACEHOLDER}&event={PLACEHOLDER}&partner={PLACEHOLDER}&key={PLACEHOLDER}&idfa={PLACEHOLDER}&aaid={PLACEHOLDER}&country={PLACEHOLDER}&device_name={PLACEHOLDER}&os_name={PLACEHOLDER}&os_version={PLACEHOLDER}&user={PLACEHOLDER}&yob={PLACEHOLDER}&gender={PLACEHOLDER}&ts={PLACEHOLDER}&revenue={PLACEHOLDER}&currency={PLACEHOLDER}&network={PLACEHOLDER}&campaign={PLACEHOLDER}&ad={PLACEHOLDER}&creative={PLACEHOLDER}
+    http://track.eu1.remerge.io/event?app_id={PLACEHOLDER}&event={PLACEHOLDER}&partner={PLACEHOLDER}&key={PLACEHOLDER}&idfa={PLACEHOLDER}&aaid={PLACEHOLDER}&country={PLACEHOLDER}&device_name={PLACEHOLDER}&os_name={PLACEHOLDER}&os_version={PLACEHOLDER}&user={PLACEHOLDER}&yob={PLACEHOLDER}&gender={PLACEHOLDER}&ts={PLACEHOLDER}&revenue={PLACEHOLDER}&currency={PLACEHOLDER}&network={PLACEHOLDER}&campaign={PLACEHOLDER}&ad={PLACEHOLDER}&creative={PLACEHOLDER}&click_id={PLACEHOLDER}
