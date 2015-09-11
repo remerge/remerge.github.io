@@ -18,6 +18,7 @@ name | content | examples
 :------------ | :------------- | :------------
 app_id (**M**) | iTunes or Google Play Store App ID  | 553834731, com.king.candycrush
 event (**M**)| name of the event | purchase, add_to_basket, level_2_reached
+data | additional data for the event, can be anything, usually JSON | {"store":1341, "keywords":["yellow","red"]}
 value | event value (can be an abritrary properly encoded string) | sock, 41231, 1-0
 ts (**M**)| event timestamp as [unix epoch](http://en.wikipedia.org/wiki/Unix_time), timezone should be UTC | 1427976389
 partner (**M**)| name of the tracking partner | supergame
