@@ -34,7 +34,7 @@ yob | year of birth | 1982
 gender | gender (m or f)| m
 revenue | revenue in micro currency units (allows sub cent values and avoids float issues)| 170000 (=0.17), 57500000 (=5.75$)
 currency | [ISO 4217 currency code](http://en.wikipedia.org/wiki/ISO_4217) | USD
-network | if the event is attributes to a partner, the networks name or id | Facebook
+network | if the event is attributes to a partner, the networks name or id | remerge,Facebook
 campaign | if the event is attributes to a partner, the campaign name or id | us_retarget_lappsed
 ad | if the event is attributes to a partner , the ad name or id | 1231
 creative | if the event is attributes to a partner, the creative name or id | super_banner.png
