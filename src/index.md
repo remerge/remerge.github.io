@@ -6,7 +6,7 @@ remerge is a app retargeting platform. To provide updates to audience segments i
 Two endpoint are available, depending on the location of your servers.
 
     http://track.eu1.remerge.io/event
-    http://track.us1.remerge.io/event
+    http://track.us2.remerge.io/event
 
 ## Request
 For every event a GET should be send to one of the given endpoints including the following parameters (in the query string). If the request was successful the API responds with `HTTP 204`.
