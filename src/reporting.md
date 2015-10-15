@@ -33,7 +33,7 @@ Request Type | POST | -X POST | x
 
 Below is an example *POST* request to the reporting API using the data transfer tool  [curl](http://curl.haxx.se/docs/manpage.html):
 
-curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"' -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11"
+```curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"' -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11"```
 
 
 ## Response Fields
@@ -54,7 +54,7 @@ event.conversions|Daily Target Conversion Event Counter on App.Country.Campaign.
 event.unique_user|Daily unique user counter on App.Country.Campaign.Ad Level|2
 
 ## Example JSON Response
-{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"21","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"pl","cost":0.12,"campaign_name":"Test Campaign"}}]}
+```{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"21","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"pl","cost":0.12,"campaign_name":"Test Campaign"}}]}```
 
 ## Errors
 
