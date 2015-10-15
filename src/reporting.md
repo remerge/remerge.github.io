@@ -42,7 +42,7 @@ The response returns a JSON object containing an results array. Each array eleme
 name | content | examples
 :------------ | :------------- | :------------
 timestamp | UTC Timestamp| 2015-10-11T00:00:00.000Z
-event.country| RTB Geo Informatiom | DE
+event.country| RTB Geo Informatiom | de
 event.campaign|Internal Remerge Campaign ID| 42
 event.campaign_name|Internal Remerge Campaign Name| Test Campaign
 event.audience | App Store Reference | 12345678
@@ -55,7 +55,7 @@ event.conversions|Daily Target Conversion Event Counter on App.Country.Campaign.
 event.unique_user|Daily unique user counter on App.Country.Campaign.Ad Level|2
 
 ## Example JSON Response
-```{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"pl","cost":0.12,"campaign_name":"Test Campaign"}}]}```
+```{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"de","cost":0.12,"campaign_name":"Test Campaign"}}]}```
 
 ## Errors
 
