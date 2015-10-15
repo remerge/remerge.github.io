@@ -11,7 +11,7 @@ start_date| Starting date of report (YYYY-MM-DD)|2015-10-09| x
 end_date|End date of report (YYYY-MM-DD)|2015-10-10| x
 
 ## Example Request
-curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H "Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"" http://www.example.com -X POST "http://localhost:3001/report?start_date=2015-10-10&end_date=2015-10-11"
+curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H "Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"" http://www.example.com -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11"
 
 ## Response Fields
 
