@@ -3,9 +3,9 @@
 ## Introduction
 remerge is an app retargeting platform. In addition to our platform's dashboard and analytical capabilities, customers are able to pull JSON-based reports from the remerge reporting API for their currently running campaigns to their internal BI on a daily granularity basis. 
 
-The performance by customer is broken down by the five dimensions timestamp, country, App, campaign and related ads. Therefore, the results can be easly imported and sliced and diced by the provided dimensions in any Business Intelligence platform of the customer's choice. 
+The performance by customer is broken down by the following five dimensions: timestamp, country, App, campaign and related ads. Therefore, the results can be easly imported and sliced and diced by the provided dimensions in any Business Intelligence platform of the customer's choice. 
 
-The API is accessiable via the following endpoint  *https://api.remerge.io/report*
+The API is accessible via the following endpoint  *https://api.remerge.io/report*
 
 ## Request Parameters
 
@@ -20,7 +20,7 @@ A valid request would look like: https://api.remerge.io/report?start_date=2015-1
 
 ## Authorization
 
-In addition the requst must be authorized. The following request headers are mandatory. To get the necessary information for the authorization token please contact your remerge Account Manager:
+In addition the request must be authorized. The following request headers are mandatory. To get the necessary information for the authorization token please contact your remerge Account Manager:
 
 name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
