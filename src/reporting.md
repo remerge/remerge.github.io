@@ -5,17 +5,17 @@ remerge is an app retargeting platform. In addition to our platform's dashboard 
 
 ## Request Parameters
 
-name | content | examples
-:------------ | :------------- | :------------
-country||
-campaign||
-ad||
-impressions||
-clicks||
-buying_price||
-app_open_rate||
-conversions||
-unique_user||
+name | content | examples | mandatory
+:------------ | :------------- | :------------ | :------------
+country|||
+campaign|||
+ad|||
+impressions|||
+clicks|||
+buying_price|||
+app_open_rate|||
+conversions|||
+unique_user|||
 
 ## Example Request
 
