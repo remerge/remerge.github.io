@@ -63,7 +63,7 @@ If there exists no data for the given interval the request will return an empty 
 
 Status | Message | Explanation
 :------------ | :------------- | :------------
-200| OK | Query results returend as JSON
+200| OK | Query results returned as JSON
 401| Unauthorized | The provided Authorization token was invalid
 422| start_date: Format YYYY-MM-DD required | Start Date illformated
 422| end_date: Format YYYY-MM-DD required | End Date illformated
