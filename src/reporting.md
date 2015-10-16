@@ -5,9 +5,11 @@ remerge is an app retargeting platform. In addition to our platform's dashboard 
 
 The performance by customer is broken down by the following five dimensions: timestamp, country, App, campaign and related ads. Therefore, the results can be easly imported and sliced and diced by the provided dimensions in any Business Intelligence platform of the customer's choice. 
 
+## Endpoint
+
 The API is accessible via the following endpoint:
 
-  https://api.remerge.io/report
+   https://api.remerge.io/report
 
 ## Request Parameters
 
