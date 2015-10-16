@@ -24,10 +24,10 @@ In addition the request must be authorized. The following request headers are ma
 
 name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
-Request Header | Content-Type | -H 'Content-Type: application/json' | x
-Request Header | Acceptance  | -H 'Accept: application/json' | x
-Request Header | Authorization Token | -H 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"'| x
-Request Type | POST | -X POST | x
+Request Header | Content-Type | 'Content-Type: application/json' | x
+Request Header | Acceptance  | 'Accept: application/json' | x
+Request Header | Authorization Token | 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"'| x
+Request Type | POST | POST | x
 
 ## Example Request
 
