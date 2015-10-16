@@ -37,7 +37,7 @@ Below is an example *POST* request to the reporting API using the data transfer 
 
 
 ## Response Fields
-The response returns a JSON object containing an results array. Each array element consists of the following fields:
+The response returns a JSON object containing an results array and an element count. Each array element consists of the following fields:
 
 name | content | examples
 :------------ | :------------- | :------------
@@ -55,13 +55,16 @@ event.conversions|Daily Target Conversion Event Counter on App.Country.Campaign.
 event.unique_user|Daily unique user counter on App.Country.Campaign.Ad Level|2
 
 ## Example JSON Response
-```{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"de","cost":0.12,"campaign_name":"Test Campaign"}}]}```
+```{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"de","cost":0.12,"campaign_name":"Test Campaign"}}],count:1}```
+
+If there exists no data for the given interval the request will return an empty results array and count: 0 
 
 ## Errors
 
 Status | Message | Explanation
 :------------ | :------------- | :------------
 200| OK | Query results returend as JSON
+401| Unauthorized | The provided Authorization token was invalid
 422| start_date: Format YYYY-MM-DD required |  Start Date illformated
 422| end_date: Format YYYY-MM-DD required |  End Date illformated
 422| start_date: must be a valid date | No real date provided, e.g. 2015-33-09
