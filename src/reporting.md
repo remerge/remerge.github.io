@@ -33,7 +33,7 @@ Request Type | POST | -X POST | x
 
 Below is an example *POST* request to the reporting API using the data transfer tool  [curl](http://curl.haxx.se/docs/manpage.html):
 
-```curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"' -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11"```
+```curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"' -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11" -v```
 
 
 ## Response Fields
@@ -65,8 +65,8 @@ Status | Message | Explanation
 :------------ | :------------- | :------------
 200| OK | Query results returend as JSON
 401| Unauthorized | The provided Authorization token was invalid
-422| start_date: Format YYYY-MM-DD required |  Start Date illformated
-422| end_date: Format YYYY-MM-DD required |  End Date illformated
+422| start_date: Format YYYY-MM-DD required | Start Date illformated
+422| end_date: Format YYYY-MM-DD required | End Date illformated
 422| start_date: must be a valid date | No real date provided, e.g. 2015-33-09
 422| end_date: must be a valid date | No real date provided, e.g. 2015-33-09
 422| end_date: end date must be greater or equal to the start date | End date is earlier then start date
