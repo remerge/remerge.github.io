@@ -69,7 +69,7 @@
 <tr>
 <td style="text-align:left">Request Header</td>
 <td style="text-align:left">Authorization Token</td>
-<td style="text-align:left">&#39;Authorization: Token user_token=\&quot;HJn4OYViZv\&quot;, email=\&quot;example@mydomain.com\&quot;&#39;</td>
+<td style="text-align:left">&#39;Authorization: Token user_token=&quot;HJn4OYViZv&quot;, email=&quot;example@mydomain.com&quot;&#39;</td>
 <td style="text-align:left">x</td>
 </tr>
 <tr>
@@ -82,7 +82,7 @@
 </table>
 <h2 id="example-request"><a class="header-link" href="#example-request"></a>Example Request</h2>
 <p>Below is an example <em>POST</em> request to the reporting API using the data transfer tool  <a href="http://curl.haxx.se/docs/manpage.html">curl</a>:</p>
-<pre class="hljs"><code>  curl -<span class="hljs-keyword">H</span> 'Content-<span class="hljs-keyword">Type</span>: application/json' -<span class="hljs-keyword">H</span> 'Accept: application/json' -<span class="hljs-keyword">H</span> 'Authorization: <span class="hljs-keyword">Token</span> user_token=\<span class="hljs-string">"HJn4OYViZv\"</span>, email=\<span class="hljs-string">"example@mydomain.com\"</span>' -X <span class="hljs-keyword">POST</span> <span class="hljs-string">"https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11"</span> -v</code></pre><h2 id="response-fields"><a class="header-link" href="#response-fields"></a>Response Fields</h2>
+<pre class="hljs"><code>  curl -<span class="hljs-keyword">H</span> 'Content-<span class="hljs-keyword">Type</span>: application/json' -<span class="hljs-keyword">H</span> 'Accept: application/json' -<span class="hljs-keyword">H</span> 'Authorization: <span class="hljs-keyword">Token</span> user_token=<span class="hljs-string">"HJn4OYViZv"</span>, email=<span class="hljs-string">"example@mydomain.com"</span>' -X <span class="hljs-keyword">POST</span> <span class="hljs-string">"https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11"</span> -v</code></pre><h2 id="response-fields"><a class="header-link" href="#response-fields"></a>Response Fields</h2>
 <p>The response returns a JSON object containing an results array and an element count. Each array element consists of the following fields:</p>
 <table>
 <thead>
