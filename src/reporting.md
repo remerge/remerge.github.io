@@ -30,14 +30,14 @@ name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
 Request Header | Content-Type | 'Content-Type: application/json' | x
 Request Header | Acceptance  | 'Accept: application/json' | x
-Request Header | Authorization Token | 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"'| x
+Request Header | Authorization Token | 'Authorization: Token user_token="HJn4OYViZv", email="example@mydomain.com"'| x
 Request Type | POST | POST | x
 
 ## Example Request
 
 Below is an example *POST* request to the reporting API using the data transfer tool  [curl](http://curl.haxx.se/docs/manpage.html):
 
-      curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token=\"HJn4OYViZv\", email=\"example@mydomain.com\"' -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11" -v
+      curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token="HJn4OYViZv", email="example@mydomain.com"' -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11" -v
 
 
 ## Response Fields
