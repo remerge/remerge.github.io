@@ -11,12 +11,12 @@
   <body>
     <article class="markdown-body"><h1 id="remerge-tracking-api"><a class="header-link" href="#remerge-tracking-api"></a>Remerge tracking API</h1>
 <h2 id="introduction"><a class="header-link" href="#introduction"></a>Introduction</h2>
-<p>remerge is a app retargeting platform. To provide updates to audience segments in real time customers who don&#39;t use an attributions provider supported by remerge (like <a href="http://www.adjust.com">Adjust</a>) or have an internal tracking solution, can forward events to the remerge tracking API.</p>
+<p>remerge is an app retargeting platform. To provide updates to audience segments in real time, customers who don&#39;t use an attribution provider supported by remerge (like <a href="http://www.adjust.com">Adjust</a>) or have an internal tracking solution, can forward events to the remerge tracking API.</p>
 <h2 id="endpoint"><a class="header-link" href="#endpoint"></a>Endpoint</h2>
-<p>Two endpoint are available, depending on the location of your servers.</p>
+<p>Two endpoints are available, depending on the location of your servers.</p>
 <pre class="hljs"><code><span class="hljs-string">http:</span><span class="hljs-comment">//track.eu1.remerge.io/event</span>
 <span class="hljs-string">http:</span><span class="hljs-comment">//track.us2.remerge.io/event</span></code></pre><h2 id="request"><a class="header-link" href="#request"></a>Request</h2>
-<p>For every event a GET should be send to one of the given endpoints including the following parameters (in the query string). If the request was successful the API responds with <code>HTTP 204</code>.</p>
+<p>For every event a GET should be send to one of the given endpoints including the following parameters (in the query string). For GET requests, we also support SSL/TLS. If the request was successful the API responds with <code>HTTP 204</code>.</p>
 <h2 id="parameters"><a class="header-link" href="#parameters"></a>Parameters</h2>
 <p>All mandatory parameters (marked with a <strong>M</strong>) must be provided to allow proper tracking. Optional parameters can be set to improve retargeting and reporting. Parameters which contain characters which are not web safe have to be encoded properly.</p>
 <table>
