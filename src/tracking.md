@@ -29,6 +29,7 @@ country (**M**)| [ISO alpha 2 country code](http://en.wikipedia.org/wiki/ISO_316
 device_name | Device name | iPad
 os_name (**M**)| OS name | android, ios
 os_version (**M**)| OS version | 8.0.1
+app_version (**M**)| App version | 1.2
 user | customer user id | 4838131
 yob | year of birth | 1982
 gender | gender (m or f)| m
