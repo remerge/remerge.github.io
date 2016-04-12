@@ -26,7 +26,7 @@ key (**M**)| key of the partner (provided by remerge) | x34dlx
 idfa (**M**)| [Apple IDFA](https://developer.apple.com/library/prerelease/ios/documentation/AdSupport/Reference/ASIdentifierManager_Ref/index.html#//apple_ref/occ/instp/ASIdentifierManager/advertisingIdentifier) (uppercase) (if a aaid was provided not mandatory)| AEBE52E7-03EE-455A-B3C4-E57283966239
 aaid (**M**)| [Android Advertising ID](https://developer.android.com/google/play-services/id.html) (lowercase) (if a idfa was provided not mandatory) | 38400000-8cf0-11bd-b23e-10b96e40000d
 country (**M**)| [ISO alpha 2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) (lowercase)| de
-device_name (**M**)| Device name | iPad
+device_name | Device name | iPad
 os_name (**M**)| OS name | android, ios
 os_version (**M**)| OS version | 8.0.1
 user | customer user id | 4838131
@@ -39,7 +39,6 @@ campaign | if the event is attributes to a partner, the campaign name or id | us
 ad | if the event is attributes to a partner , the ad name or id | 1231
 creative | if the event is attributes to a partner, the creative name or id | super_banner.png
 click_id | pass through parameter for the unique ad click id (usually appended to a click tracking url by remerge) | iwShT9ec49
-
 
 
 ## Example
