@@ -75,4 +75,4 @@ Status | Message | Explanation
 422| end_date: must be a valid date | No real date provided, e.g. 2015-33-09
 422| end_date: end date must be greater or equal to the start date | End date is earlier then start date
 422| queryID: queryId already exists | User has send already an request which is still processed by the api, i.e query rate limit per user is 1.
-504| Gateway Timeout | The request took to long for the webserver to process. This is typically due to a too broad query intveral, please try again with an interval of at most 14 days.
+504| Gateway Timeout | The request took to long for the webserver to process. This is typically due to a too broad query interval, please try again with an interval of at most 14 days.
