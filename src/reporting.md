@@ -1,9 +1,9 @@
 # Remerge reporting API
 
 ## Introduction
-remerge is an app retargeting platform. In addition to our platform's dashboard and analytical capabilities, customers are able to pull JSON-based reports from the remerge reporting API for their currently running campaigns to their internal BI on a daily granularity basis. 
+remerge is an app retargeting platform. In addition to our platform's dashboard and analytical capabilities, customers are able to pull JSON-based reports from the remerge reporting API for their currently running campaigns to their internal BI on a daily granularity basis.
 
-The performance by customer is broken down by the following five dimensions: timestamp, country, App, campaign and related ads. Therefore, the results can be easly imported and sliced and diced by the provided dimensions in any Business Intelligence platform of the customer's choice. 
+The performance by customer is broken down by the following five dimensions: timestamp, country, App, campaign and related ads. Therefore, the results can be easly imported and sliced and diced by the provided dimensions in any Business Intelligence platform of the customer's choice.
 
 ## Endpoint
 
@@ -13,7 +13,7 @@ The API is accessible via the following endpoint:
 
 ## Request Parameters
 
-The API provides a simple interface to query data. A start and end date are the only parameters required. 
+The API provides a simple interface to query data. A start and end date are the only parameters required.
 
 name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
@@ -61,7 +61,7 @@ event.unique_user|Daily unique user counter on App.Country.Campaign.Ad Level|2
 ## Example JSON Response
 ```{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"de","cost":0.12,"campaign_name":"Test Campaign"}}],count:1}```
 
-If there exists no data for the given interval the request will return an empty results array and count: 0 
+If there exists no data for the given interval the request will return an empty results array and count: 0
 
 ## Errors
 
@@ -74,4 +74,5 @@ Status | Message | Explanation
 422| start_date: must be a valid date | No real date provided, e.g. 2015-33-09
 422| end_date: must be a valid date | No real date provided, e.g. 2015-33-09
 422| end_date: end date must be greater or equal to the start date | End date is earlier then start date
-422| queryID: queryId already exists | User has send already an request which is still processed by the api, i.e query rate limit per user is 1.  
+422| queryID: queryId already exists | User has send already an request which is still processed by the api, i.e query rate limit per user is 1.
+504| Gateway Timeout | The request took to long for the webserver to process. This is typically due to a too broad query intveral, please try again with an interval of at most 14 days.
