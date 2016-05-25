@@ -5,24 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Remerge reporting API</title>
     <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
     <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
-    <style>
-      body {
-        min-width: 200px;
-        max-width: 790px;
-        margin: 0 auto;
-        padding: 30px;
-      }
-    </style>
   </head>
   <body>
-    <article class="markdown-body"><h1 id="remerge-reporting-api">Remerge reporting API</h1>
-<h2 id="introduction">Introduction</h2>
+    <article class="markdown-body"><h1 id="remerge-reporting-api"><a class="header-link" href="#remerge-reporting-api"></a>Remerge reporting API</h1>
+<h2 id="introduction"><a class="header-link" href="#introduction"></a>Introduction</h2>
 <p>remerge is an app retargeting platform. In addition to our platform&#39;s dashboard and analytical capabilities, customers are able to pull JSON-based reports from the remerge reporting API for their currently running campaigns to their internal BI on a daily granularity basis. </p>
 <p>The performance by customer is broken down by the following five dimensions: timestamp, country, App, campaign and related ads. Therefore, the results can be easly imported and sliced and diced by the provided dimensions in any Business Intelligence platform of the customer&#39;s choice. </p>
-<h2 id="endpoint">Endpoint</h2>
+<h2 id="endpoint"><a class="header-link" href="#endpoint"></a>Endpoint</h2>
 <p>The API is accessible via the following endpoint:</p>
-<pre class="hljs"><code>  <span class="hljs-attribute">https</span>:<span class="hljs-comment">//api.remerge.io/report</span></code></pre><h2 id="request-parameters">Request Parameters</h2>
+<pre class="hljs"><code>  <span class="hljs-attribute">https</span>:<span class="hljs-comment">//api.remerge.io/report</span></code></pre><h2 id="request-parameters"><a class="header-link" href="#request-parameters"></a>Request Parameters</h2>
 <p>The API provides a simple interface to query data. A start and end date are the only parameters required. </p>
 <table>
 <thead>
@@ -49,7 +42,7 @@
 </tbody>
 </table>
 <p>A valid request would look like: <a href="https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11">https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11</a></p>
-<h2 id="authorization">Authorization</h2>
+<h2 id="authorization"><a class="header-link" href="#authorization"></a>Authorization</h2>
 <p>In addition the request must be authorized. The following request headers are mandatory. To get the necessary information for the authorization token please contact your remerge Account Manager:</p>
 <table>
 <thead>
@@ -87,9 +80,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="example-request">Example Request</h2>
+<h2 id="example-request"><a class="header-link" href="#example-request"></a>Example Request</h2>
 <p>Below is an example <em>POST</em> request to the reporting API using the data transfer tool  <a href="http://curl.haxx.se/docs/manpage.html">curl</a>:</p>
-<pre class="hljs"><code>  curl -<span class="hljs-type">H</span> <span class="hljs-symbol">'Content</span>-<span class="hljs-type">Type</span>: application/json' -<span class="hljs-type">H</span> <span class="hljs-symbol">'Accept</span>: application/json' -<span class="hljs-type">H</span> <span class="hljs-symbol">'Authorization</span>: <span class="hljs-type">Token</span> user_token=<span class="hljs-string">"HJn4OYViZv"</span>, email=<span class="hljs-string">"example@mydomain.com"</span><span class="hljs-char">' -X POST "https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11" -v</span></code></pre><h2 id="response-fields">Response Fields</h2>
+<pre class="hljs"><code>  curl -<span class="hljs-keyword">H</span> 'Content-<span class="hljs-keyword">Type</span>: application/json' -<span class="hljs-keyword">H</span> 'Accept: application/json' -<span class="hljs-keyword">H</span> 'Authorization: <span class="hljs-keyword">Token</span> user_token=<span class="hljs-string">"HJn4OYViZv"</span>, email=<span class="hljs-string">"example@mydomain.com"</span>' -X <span class="hljs-keyword">POST</span> <span class="hljs-string">"https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11"</span> -v</code></pre><h2 id="response-fields"><a class="header-link" href="#response-fields"></a>Response Fields</h2>
 <p>The response returns a JSON object containing an results array and an element count. Each array element consists of the following fields:</p>
 <table>
 <thead>
@@ -162,10 +155,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="example-json-response">Example JSON Response</h2>
+<h2 id="example-json-response"><a class="header-link" href="#example-json-response"></a>Example JSON Response</h2>
 <p><code>{results: [{&quot;timestamp&quot;:&quot;2015-10-11T00:00:00.000Z&quot;,&quot;event&quot;:{&quot;impressions&quot;:2,&quot;audience&quot;:&quot;12345678&quot;,&quot;app_open_rate&quot;:1.0,&quot;clicks&quot;:1,&quot;ad&quot;:&quot;test.jpg&quot;,&quot;user_id&quot;:2,&quot;conversions&quot;:1,&quot;campaign&quot;:&quot;42&quot;,&quot;country&quot;:&quot;de&quot;,&quot;cost&quot;:0.12,&quot;campaign_name&quot;:&quot;Test Campaign&quot;}}],count:1}</code></p>
 <p>If there exists no data for the given interval the request will return an empty results array and count: 0 </p>
-<h2 id="errors">Errors</h2>
+<h2 id="errors"><a class="header-link" href="#errors"></a>Errors</h2>
 <table>
 <thead>
 <tr>
@@ -215,12 +208,6 @@
 <td style="text-align:left">queryID: queryId already exists</td>
 <td style="text-align:left">User has send already an request which is still processed by the api, i.e query rate limit per user is 1.  </td>
 </tr>
-<tr>
-<td style="text-align:left">504</td>
-<td style="text-align:left">Gateway timeout</td>
-<td style="text-align:left">The request took to long for the webserver to process. This is typically due to a too broad query intveral, please try again with an interval of at most 14 days.</td>
-</tr>
-
 </tbody>
 </table>
     </article>
