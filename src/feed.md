@@ -33,6 +33,9 @@ The feed can have many columns but at least one ID column is required.
 - IDs should be alpha numeric
 - IDs should be unique
 
+To build compelling creatives columns for a custom title, image and deeplink should always be included. If the campaign is targeting iOS and Android, OS specific deeplink columns are necessary. To accommodate different creative formats at least two different image links should be included (sizes depend on the template used for the campaign).
+
+
 Data duplication or derived data should be avoid in the feed. For example:
 - if every deeplink starts with the same prefix, please avoid the prefix
 - if the only changing part in a deeplink is the product ID a deeplink column is not needed at all
