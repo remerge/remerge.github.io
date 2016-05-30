@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Remerge product feed specification</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <style>
+      body {
+        min-width: 200px;
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="remerge-product-feed-specification">Remerge product feed specification</h1>
+<h2 id="introduction">Introduction</h2>
+<p>remerge does support dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images.</p>
+<h2 id="requirements">Requirements</h2>
+<h3 id="feed-availability">Feed availability</h3>
+<ul class="list">
+<li>the feed must be available via http/https (for example on S3) or SFTP</li>
+<li>credentials to access the feed must be supplied to remerge ahead of time</li>
+</ul>
+<h3 id="feed-format">Feed format</h3>
+<p>The feed needs to be a CSV file (can be gezipped).</p>
+<ul class="list">
+<li>Unicode (UTF-8) should be used as character set (a byte order mark should not be used)</li>
+<li>the column delimiter should be a comma</li>
+<li>each row must contain the same number of fields</li>
+<li>the csv must contain a header with column names</li>
+<li>column names should be alpha numeric but must begin with a letter</li>
+<li>column names should be can be camel cased or snake cased</li>
+<li>column names are not allowed to include spaces and other special characters</li>
+<li>fields can be quoted (double quotes)</li>
+<li>fields containing a comma or quotes must be quoted</li>
+</ul>
+<h3 id="feed-content">Feed content</h3>
+<p>The feed can have many columns but at least one ID column is required. IDs are going to be used to index the product data and are usually provided via a customer specific event (for example has_viewed_product accompanied with the product ID).</p>
+<ul class="list">
+<li>an ID column should exists</li>
+<li>IDs should be alpha numeric</li>
+<li>IDs should be unique</li>
+</ul>
+<p>Data duplication or derived data should be avoid in the feed. For example:</p>
+<ul class="list">
+<li>if every deeplink starts with the same prefix, please avoid the prefix</li>
+<li>if the only changing part in a deeplink is the product ID a deeplink column is not needed at all</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre class="hljs"><code>id,title,price,deeplink
+<span class="hljs-number">7</span>ZU9HYbj3Y,Diamond sword,<span class="hljs-number">15.34</span>, <span class="hljs-string">myapp:</span><span class="hljs-comment">//item/111</span>
+gVWVdrqnm7,Metal helmet,<span class="hljs-number">7.44</span>,<span class="hljs-string">myapp:</span><span class="hljs-comment">//item/24</span>
+N9czkX9WXo,Gloves of magic,<span class="hljs-number">122.22</span>,<span class="hljs-string">myapp:</span><span class="hljs-comment">//item/31</span></code></pre>    </article>
+  </body>
+</html>
