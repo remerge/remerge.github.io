@@ -4,4 +4,3 @@ remerge is a app retargeting platform. To provide updates to audience segments i
 
 * [remerge tracking API](tracking.html)
 * [remerge reporting API](reporting.html)
-* [remerge product feed specification](feed.html)
