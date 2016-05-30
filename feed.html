@@ -18,12 +18,13 @@
   <body>
     <article class="markdown-body"><h1 id="remerge-product-feed-specification">Remerge product feed specification</h1>
 <h2 id="introduction">Introduction</h2>
-<p>remerge does support dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images.</p>
+<p>remerge does support dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images. The most compelling creatives are powered by a product feed which contains these data points and is indexed by the users past activity. To simplify the setup of campaigns that leverage dynamic creative powered by a product feed, the feed has to fulfil the following requirements.</p>
 <h2 id="requirements">Requirements</h2>
 <h3 id="feed-availability">Feed availability</h3>
 <ul class="list">
 <li>the feed must be available via http/https (for example on S3) or SFTP</li>
 <li>credentials to access the feed must be supplied to remerge ahead of time</li>
+<li>remerge is going to update the feed every 24h</li>
 </ul>
 <h3 id="feed-format">Feed format</h3>
 <p>The feed needs to be a CSV file (can be gezipped).</p>
@@ -39,7 +40,7 @@
 <li>fields containing a comma or quotes must be quoted</li>
 </ul>
 <h3 id="feed-content">Feed content</h3>
-<p>The feed can have many columns but at least one ID column is required. IDs are going to be used to index the product data and are usually provided via a customer specific event (for example has_viewed_product accompanied with the product ID).</p>
+<p>The feed can have many columns but at least one ID column is required.</p>
 <ul class="list">
 <li>an ID column should exists</li>
 <li>IDs should be alpha numeric</li>
@@ -50,6 +51,8 @@
 <li>if every deeplink starts with the same prefix, please avoid the prefix</li>
 <li>if the only changing part in a deeplink is the product ID a deeplink column is not needed at all</li>
 </ul>
+<h3 id="indexing-the-feed">Indexing the feed</h3>
+<p>The ID used to index a feed is usually supplied within the app event attribution stream. For example a ProductViewed event should contain the ID of the product as additional data.</p>
 <h2 id="example">Example</h2>
 <pre class="hljs"><code>id,title,price,deeplink
 <span class="hljs-number">7</span>ZU9HYbj3Y,Diamond sword,<span class="hljs-number">15.34</span>, <span class="hljs-string">myapp:</span><span class="hljs-comment">//item/111</span>

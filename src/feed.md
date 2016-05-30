@@ -1,7 +1,7 @@
 # Remerge product feed specification
 
 ## Introduction
-remerge does support dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images.
+remerge does support dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images. The most compelling creatives are powered by a product feed which contains these data points and is indexed by the users past activity. To simplify the setup of campaigns that leverage dynamic creative powered by a product feed, the feed has to fulfil the following requirements.
 
 ## Requirements
 
@@ -9,6 +9,7 @@ remerge does support dynamic creatives. Dynamic creatives contain placeholders w
 
 - the feed must be available via http/https (for example on S3) or SFTP
 - credentials to access the feed must be supplied to remerge ahead of time
+- remerge is going to update the feed every 24h
 
 ### Feed format
 
@@ -26,7 +27,7 @@ The feed needs to be a CSV file (can be gezipped).
 
 ### Feed content
 
-The feed can have many columns but at least one ID column is required. IDs are going to be used to index the product data and are usually provided via a customer specific event (for example has_viewed_product accompanied with the product ID).
+The feed can have many columns but at least one ID column is required.
 
 - an ID column should exists
 - IDs should be alpha numeric
@@ -35,6 +36,10 @@ The feed can have many columns but at least one ID column is required. IDs are g
 Data duplication or derived data should be avoid in the feed. For example:
 - if every deeplink starts with the same prefix, please avoid the prefix
 - if the only changing part in a deeplink is the product ID a deeplink column is not needed at all
+
+### Indexing the feed
+
+The ID used to index a feed is usually supplied within the app event attribution stream. For example a ProductViewed event should contain the ID of the product as additional data.
 
 ## Example
 
