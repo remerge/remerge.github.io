@@ -1,7 +1,7 @@
 # Remerge product feed specification
 
 ## Introduction
-remerge does support dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images. The most compelling creatives are powered by a product feed which contains these data points and is indexed by the users past activity. To simplify the setup of campaigns that leverage dynamic creative powered by a product feed, the feed has to fulfil the following requirements.
+Remerge supports dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images. The most compelling creatives are powered by a product feed which contains these data points and is indexed by the users past activity. To simplify the setup of campaigns that leverage dynamic creative powered by a product feed, the feed has to fulfill the following requirements.
 
 ## Requirements
 
@@ -36,13 +36,13 @@ The feed can have many columns but at least one ID column is required.
 To build compelling creatives columns for a custom title, image and deeplink should always be included. If the campaign is targeting iOS and Android, OS specific deeplink columns are necessary. To accommodate different creative formats at least two different image links should be included (sizes depend on the template used for the campaign).
 
 
-Data duplication or derived data should be avoid in the feed. For example:
+Data duplication or derived data should be avoided in the feed. For example:
 - if every deeplink starts with the same prefix, please avoid the prefix
 - if the only changing part in a deeplink is the product ID a deeplink column is not needed at all
 
 ### Indexing the feed
 
-The ID used to index a feed is usually supplied within the app event attribution stream. For example a ProductViewed event should contain the ID of the product as additional data.
+The ID used to index a feed is usually supplied within the app event attribution stream. For example, a ProductViewed event should contain the ID of the product as additional data.
 
 ## Example
 
