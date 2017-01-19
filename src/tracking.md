@@ -40,7 +40,7 @@ campaign | if the event is attributes to a partner, the campaign name or id | us
 ad | if the event is attributes to a partner , the ad name or id | 1231
 creative | if the event is attributes to a partner, the creative name or id | super_banner.png
 click_id | pass through parameter for the unique ad click id (usually appended to a click tracking url by remerge) | iwShT9ec49
-
+non_app_event | if the event is not created by the app (i.e. a click post back) - true or false | true 
 
 ## Example
 Example with placeholders (whereas {PLACEHOLDER} should be the name of your internal placeholder)
