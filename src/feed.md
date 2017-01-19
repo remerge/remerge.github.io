@@ -1,7 +1,7 @@
 # Remerge product feed specification
 
 ## Introduction
-Remerge supports dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images. The most compelling creatives are powered by a product feed which contains these data points and is indexed by the users past activity. To simplify the setup of campaigns that leverage dynamic creative powered by a product feed, the feed has to fulfill the following requirements.
+remerge does support dynamic creatives. Dynamic creatives contain placeholders which are filled with data that is specific to the user who is seeing the advertisement. Examples are titles, prices, call to actions, deeplinks or images. The most compelling creatives are powered by a product feed which contains these data points and is indexed by the users past activity. To simplify the setup of campaigns that leverage dynamic creative powered by a product feed, the feed has to fulfill the following requirements.
 
 ## Requirements
 
@@ -29,7 +29,7 @@ The feed needs to be a CSV file (can be gezipped).
 
 The feed can have many columns but at least one ID column is required.
 
-- an ID column should exists
+- an ID column should exist
 - IDs should be alpha numeric
 - IDs should be unique
 
@@ -48,7 +48,7 @@ The ID used to index a feed is usually supplied within the app event attribution
 
 ```
 id,title,price,deeplink
-7ZU9HYbj3Y,Diamond sword,15.34, myapp://item/111
+7ZU9HYbj3Y,Diamond sword,15.34,myapp://item/111
 gVWVdrqnm7,Metal helmet,7.44,myapp://item/24
 N9czkX9WXo,Gloves of magic,122.22,myapp://item/31
 ```
