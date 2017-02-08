@@ -17,11 +17,11 @@ The API provides a simple interface to query data. A start and end date are the 
 
 name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
-start_date| Starting date of report (YYYY-MM-DD)|2015-10-09| x
-end_date|End date of report (YYYY-MM-DD)|2015-10-10| x
+start_date| Starting date of report (YYYY-MM-DD)|2017-01-09| x
+end_date|End date of report (YYYY-MM-DD)|2017-01-10| x
 dimensions|Comma seperated list of dimensions to split the aggregates by. Defaults to _audience,country,campaign,ad_ if not passed. Possible values are _audience, country, campaign, ad, platform_.|country,platform| 
 
-A valid request would look like: https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11&dimensions=campaign,ad
+A valid request would look like: https://api.remerge.io/report?start_date=2017-01-10&end_date=2017-01-11&dimensions=campaign,ad
 
 ## Authorization
 
@@ -29,11 +29,11 @@ In addition the request must be authorized. To get the necessary information for
 
 Sign in request example.
 
-      curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST htd '{"user" : { "email" : "your@email.com", "password": "password"}}'
+```curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST htd '{"user" : { "email" : "your@email.com", "password": "password"}}'```
 
 Which returns the needed token as JSON.
 
-    {"email":"your@email.com","token":"J-QeJxyza7JH19QUDb4","user_id":1234,"user_name":"Peter Example","user_token":"J-QeJ49Yasdf219QUDb4"}
+```{"email":"your@email.com","token":"J-QeJxyza7JH19QUDb4","user_id":1234,"user_name":"Peter Example","user_token":"J-QeJ49Yasdf219QUDb4"}```
 
 
 The following request headers are mandatory for to make a valid reporting request.
@@ -49,7 +49,7 @@ Request Type | POST | POST | x
 
 Below is an example *POST* request to the reporting API using the data transfer tool  [curl](http://curl.haxx.se/docs/manpage.html):
 
-      curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token="HJn4OYViZv", email="example@mydomain.com"' -X POST "https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11" -v
+```curl -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Token user_token="HJn4OYViZv", email="example@mydomain.com"' -X POST "https://api.remerge.io/report?start_date=2017-01-10&end_date=2017-01-11" -v```
 
 
 ## Response Fields
@@ -57,7 +57,7 @@ The response returns a JSON object containing an results array and an element co
 
 name | content | examples
 :------------ | :------------- | :------------
-timestamp | UTC Timestamp| 2015-10-11T00:00:00.000Z
+timestamp | UTC Timestamp| 2017-01-11T00:00:00.000Z
 event.platform|Platform which can be ios or android|ios|
 event.country| RTB Geo Informatiom | de
 event.campaign|Internal Remerge Campaign ID| 42
@@ -72,7 +72,7 @@ event.conversions|Daily Target Conversion Event Counter on App.Country.Campaign.
 event.unique_user|Daily unique user counter on App.Country.Campaign.Ad Level|2
 
 ## Example JSON Response
-```{results: [{"timestamp":"2015-10-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"de","cost":0.12,"campaign_name":"Test Campaign"}}],count:1}```
+```{results: [{"timestamp":"2017-01-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"de","cost":0.12,"campaign_name":"Test Campaign"}}],count:1}```
 
 If there exists no data for the given interval the request will return an empty results array and count: 0
 
