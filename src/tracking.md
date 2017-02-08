@@ -5,7 +5,7 @@ remerge is a app retargeting platform. To provide updates to audience segments i
 ## Endpoint
 Two endpoint are available, depending on the location of your servers.
 
-    http://track.eu1.remerge.io/event
+    http://track.eu2.remerge.io/event
     http://track.us2.remerge.io/event
 
 ## Request
@@ -41,8 +41,9 @@ ad | if the event is attributes to a partner , the ad name or id | 1231
 creative | if the event is attributes to a partner, the creative name or id | super_banner.png
 click_id | pass through parameter for the unique ad click id (usually appended to a click tracking url by remerge) | iwShT9ec49
 non_app_event | if the event is not created by the app (i.e. a click post back) - true or false | true 
+is_attributed (***M***) | definition whether an event is attributed to remerge or other sources | 1 (= remerge) or 0 (=organic or other mediasource)
 
 ## Example
 Example with placeholders (whereas {PLACEHOLDER} should be the name of your internal placeholder)
 
-    http://track.eu1.remerge.io/event?app_id={PLACEHOLDER}&event={PLACEHOLDER}&partner={PLACEHOLDER}&key={PLACEHOLDER}&idfa={PLACEHOLDER}&aaid={PLACEHOLDER}&country={PLACEHOLDER}&device_name={PLACEHOLDER}&os_name={PLACEHOLDER}&os_version={PLACEHOLDER}&user={PLACEHOLDER}&yob={PLACEHOLDER}&gender={PLACEHOLDER}&ts={PLACEHOLDER}&revenue={PLACEHOLDER}&currency={PLACEHOLDER}&network={PLACEHOLDER}&campaign={PLACEHOLDER}&ad={PLACEHOLDER}&creative={PLACEHOLDER}&click_id={PLACEHOLDER}
+    http://track.eu2.remerge.io/event?app_id={PLACEHOLDER}&event={PLACEHOLDER}&partner={PLACEHOLDER}&key={PLACEHOLDER}&idfa={PLACEHOLDER}&aaid={PLACEHOLDER}&country={PLACEHOLDER}&device_name={PLACEHOLDER}&os_name={PLACEHOLDER}&os_version={PLACEHOLDER}&user={PLACEHOLDER}&yob={PLACEHOLDER}&gender={PLACEHOLDER}&ts={PLACEHOLDER}&revenue={PLACEHOLDER}&currency={PLACEHOLDER}&network={PLACEHOLDER}&campaign={PLACEHOLDER}&ad={PLACEHOLDER}&creative={PLACEHOLDER}&click_id={PLACEHOLDER}
