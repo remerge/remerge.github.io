@@ -19,12 +19,24 @@ name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
 start_date| Starting date of report (YYYY-MM-DD)|2015-10-09| x
 end_date|End date of report (YYYY-MM-DD)|2015-10-10| x
+dimensions|Comma seperated list of dimensions to split the aggregates by. Defaults to _audience,country,campaign,ad_ if not passed. Possible values are _audience, country, campaign, ad, platform_.|country,platform| 
 
-A valid request would look like: https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11
+A valid request would look like: https://api.remerge.io/report?start_date=2015-10-10&end_date=2015-10-11&dimensions=campaign,ad
 
 ## Authorization
 
-In addition the request must be authorized. The following request headers are mandatory. To get the necessary information for the authorization token please contact your remerge Account Manager:
+In addition the request must be authorized. To get the necessary information for the authorization token please contact your remerge Account Manager or issue a sign in request to api.remerge.io.
+
+Sign in request example.
+
+      curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST htd '{"user" : { "email" : "your@email.com", "password": "password"}}'
+
+Which returns the needed token as JSON.
+
+    {"email":"your@email.com","token":"J-QeJxyza7JH19QUDb4","user_id":1234,"user_name":"Peter Example","user_token":"J-QeJ49Yasdf219QUDb4"}
+
+
+The following request headers are mandatory for to make a valid reporting request.
 
 name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
@@ -46,6 +58,7 @@ The response returns a JSON object containing an results array and an element co
 name | content | examples
 :------------ | :------------- | :------------
 timestamp | UTC Timestamp| 2015-10-11T00:00:00.000Z
+event.platform|Platform which can be ios or android|ios|
 event.country| RTB Geo Informatiom | de
 event.campaign|Internal Remerge Campaign ID| 42
 event.campaign_name|Internal Remerge Campaign Name| Test Campaign

@@ -39,11 +39,20 @@
 <td style="text-align:left">2015-10-10</td>
 <td style="text-align:left">x</td>
 </tr>
+<tr>
+<td style="text-align:left">dimensions</td>
+<td style="text-align:left">Comma seperated list of dimensions to split the aggregates by. Defaults to <em>audience,country,campaign,ad</em> if not passed. Possible values are <em>audience, country, campaign, ad, platform</em>.</td>
+<td style="text-align:left">country,platform</td>
+<td style="text-align:left"></td>
+</tr>
 </tbody>
 </table>
-<p>A valid request would look like: <a href="https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11">https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11</a></p>
+<p>A valid request would look like: <a href="https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11&amp;dimensions=campaign,ad">https://api.remerge.io/report?start_date=2015-10-10&amp;end_date=2015-10-11&amp;dimensions=campaign,ad</a></p>
 <h2 id="authorization"><a class="header-link" href="#authorization"></a>Authorization</h2>
-<p>In addition the request must be authorized. The following request headers are mandatory. To get the necessary information for the authorization token please contact your remerge Account Manager:</p>
+<p>In addition the request must be authorized. To get the necessary information for the authorization token please contact your remerge Account Manager or issue a sign in request to api.remerge.io.</p>
+<p>Sign in request example.</p>
+<pre class="hljs"><code>  curl -H <span class="hljs-symbol">'Content</span>-<span class="hljs-keyword">Type</span>: application/json' -H <span class="hljs-symbol">'Accept</span>: application/json' -X POST htd '{<span class="hljs-string">"user"</span> : { "<span class="hljs-type">email</span><span class="hljs-string">" : "</span>your@email.com<span class="hljs-string">", "</span>password<span class="hljs-string">": "</span>password<span class="hljs-string">"}}'</span></code></pre><p>Which returns the needed token as JSON.</p>
+<pre class="hljs"><code>{<span class="hljs-attr">"email"</span>:<span class="hljs-string">"your@email.com"</span>,<span class="hljs-attr">"token"</span>:<span class="hljs-string">"J-QeJxyza7JH19QUDb4"</span>,<span class="hljs-attr">"user_id"</span>:<span class="hljs-number">1234</span>,<span class="hljs-attr">"user_name"</span>:<span class="hljs-string">"Peter Example"</span>,<span class="hljs-attr">"user_token"</span>:<span class="hljs-string">"J-QeJ49Yasdf219QUDb4"</span>}</code></pre><p>The following request headers are mandatory for to make a valid reporting request.</p>
 <table>
 <thead>
 <tr>
@@ -97,6 +106,12 @@
 <td style="text-align:left">timestamp</td>
 <td style="text-align:left">UTC Timestamp</td>
 <td style="text-align:left">2015-10-11T00:00:00.000Z</td>
+</tr>
+<tr>
+<td style="text-align:left">event.platform</td>
+<td style="text-align:left">Platform which can be ios or android</td>
+<td style="text-align:left">ios</td>
+<td></td>
 </tr>
 <tr>
 <td style="text-align:left">event.country</td>
