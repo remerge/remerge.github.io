@@ -53,6 +53,7 @@ Below is an example *POST* request to the reporting API using the data transfer 
 
 
 ## Response Fields
+
 The response returns a JSON object containing an results array and an element count. Each array element consists of the following fields:
 
 name | content | examples
@@ -75,6 +76,28 @@ event.unique_user|Daily unique user counter on App.Country.Campaign.Ad Level|2
 ```{results: [{"timestamp":"2017-01-11T00:00:00.000Z","event":{"impressions":2,"audience":"12345678","app_open_rate":1.0,"clicks":1,"ad":"test.jpg","user_id":2,"conversions":1,"campaign":"42","country":"de","cost":0.12,"campaign_name":"Test Campaign"}}],count:1}```
 
 If there exists no data for the given interval the request will return an empty results array and count: 0
+
+## Facebook
+
+Reporting for Facebook campaigns must be retrieved separately from programmatic campaigns. The request and response formats are the same, but there are a slightly different set of request parameters and response fields.
+
+### Request Parameters
+
+name | content | examples | mandatory
+:------------ | :------------- | :------------ | :------------
+start_date | Starting date of report (YYYY-MM-DD) | 2017-01-09 | x
+end_date | End date of report (YYYY-MM-DD) | 2017-01-10 | x
+supply_source | Must be set to _facebook_ | facebook| x
+
+### Response Parameters
+
+name | content | examples
+:------------ | :------------- | :------------
+timestamp | ISO8601 Timestamp | 2017-01-11T00:00:00-07:00
+event.fb_campaign_id | Facebook campaign ID | 8459561396106
+event.fb_campaign_name | Facebook campaign name | remerge_123_facebook_test
+event.cost | Cost in USD | 0.12
+event.reengagements | The number of people who took an action that was attributed to this campaign | 1
 
 ## Errors
 
