@@ -63,6 +63,7 @@ event.platform|Platform which can be ios or android|ios|
 event.country| RTB Geo Informatiom | de
 event.campaign|Internal Remerge Campaign ID| 42
 event.campaign_name|Internal Remerge Campaign Name| Test Campaign
+event.cost_currency|Internal Remerge Campaign Currency|EUR
 event.audience | App Store Reference | 12345678
 event.ad|Creative Name| test.jpg
 event.impressions|Daily Impression Counter on App.Country.Campaign.Ad Level| 2
