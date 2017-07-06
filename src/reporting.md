@@ -19,7 +19,7 @@ name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
 start_date| Starting date of report (YYYY-MM-DD)|2017-01-09| x
 end_date|End date of report (YYYY-MM-DD)|2017-01-10| x
-dimensions|Comma seperated list of dimensions to split the aggregates by. Defaults to _audience,country,campaign,ad_ if not passed. Possible values are _audience, country, campaign, ad, platform_.|country,platform| 
+dimensions|Comma seperated list of dimensions to split the aggregates by. Defaults to _audience,country,campaign,ad_ if not passed. Possible values are _audience, country, campaign, ad, platform_.|country,platform|
 
 A valid request would look like: https://api.remerge.io/report?start_date=2017-01-10&end_date=2017-01-11&dimensions=campaign,ad
 
