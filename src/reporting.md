@@ -66,6 +66,7 @@ event.campaign_name|Internal Remerge Campaign Name| Test Campaign
 event.cost_currency|Internal Remerge Campaign Currency|EUR
 event.audience | App Store Reference | 12345678
 event.ad|Creative Name| test.jpg
+event.ad_creative_url|Creative URL|https://assets.remerge.io/ad_assets/files/000/006/696/thumb/banner_300_50.png?1478088208
 event.impressions|Daily Impression Counter on App.Country.Campaign.Ad Level| 2
 event.clicks|Daily Click Counter on App.Country.Campaign.Ad Level| 1
 event.app_open_rate | Counted app opens for clicks | 1.0
