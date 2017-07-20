@@ -96,6 +96,8 @@ supply_source | Must be set to _facebook_ | facebook| x
 name | content | examples
 :------------ | :------------- | :------------
 timestamp | ISO8601 Timestamp | 2017-01-11T00:00:00-07:00
+event.campaign_id | Remerge campaign ID | 42
+event.campaign_name | Remerge campaign name | remerge_facebook_test
 event.fb_campaign_id | Facebook campaign ID | 8459561396106
 event.fb_campaign_name | Facebook campaign name | remerge_123_facebook_test
 event.cost | Cost in USD | 0.12
