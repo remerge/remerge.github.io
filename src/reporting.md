@@ -89,7 +89,8 @@ name | content | examples | mandatory
 :------------ | :------------- | :------------ | :------------
 start_date | Starting date of report (YYYY-MM-DD) | 2017-01-09 | x
 end_date | End date of report (YYYY-MM-DD) | 2017-01-10 | x
-supply_source | Must be set to _facebook_ | facebook| x
+supply_source | Must be set to _facebook_ | facebook | x
+dimensions | Comma seperated list of dimensions to split the aggregates by. Defaults to _campaign_ if not passed. Possible values are _country, campaign_ | campaign,country |
 
 ### Response Parameters
 
@@ -101,6 +102,7 @@ event.campaign_name | Remerge campaign name | remerge_facebook_test
 event.fb_campaign_id | Facebook campaign ID | 8459561396106
 event.fb_campaign_name | Facebook campaign name | remerge_123_facebook_test
 event.cost | Cost in USD | 0.12
+event.country | Country | de
 event.reengagements | The number of people who took an action that was attributed to this campaign | 1
 
 ## Errors
